@@ -1,0 +1,113 @@
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 481px ) {
+
+    li.active::after, li a:hover::after {
+        width: 10%;
+        left: 2rem;
+    }
+    @keyframes appear {
+        from {
+            width: 0;
+        }
+    
+        to {
+            width: 10%;
+        }
+    }
+
+    /* ---------------Home Section------------------ */
+    .main_home {
+        height: 100vh;
+    }
+
+    .details {
+        height: 50vh;
+    }
+
+    .details h3 {
+        font-size: 1rem;
+    }
+
+    .details h2 {
+        width: 20rem;
+        font-size: 2rem;
+    }
+
+    .details p {
+        font-size: 1rem;
+    }
+
+    .details button {
+        font-size: 1rem;
+        width: 8rem;
+        height: 3rem;
+    }
+
+    .picture {
+        height: 50vh;
+    }
+
+    .image_pfp {
+        height: 20rem;
+        width: 15rem;
+    }
+
+    .figure_pfp {
+        height: 25rem;
+        width: 20rem;
+    }
+
+    /* ---------------About Section------------------ */
+    .main_aboutus {
+        height: 250vh;
+    }
+
+    .qualities {
+        font-size: 2rem;
+    }
+
+    .center_abt {
+        height: 80vh;
+    }
+
+    .center_abt div .know_me {
+        font-size: 2.5rem;
+    }
+
+    .right_abt {
+        margin-bottom: 3rem 0;
+    }
+    
+    .main_contact {
+        height: 170vh;
+    }
+    .contact_head {
+        height: 130vh;
+    }
+    .left_con {
+        height: 70vh;
+    }
+    .right_con {
+        height: 55vh;
+    }
+
+    .message {
+        height: 7.5rem;
+        width: 15rem;
+    /* // Medium devices (tablets, 768px and up) */
+    /* @media (min-width: 768px) {
+    ...
+} */
+
+    /* // Large devices (desktops, 992px and up) */
+    /* @media (min-width: 992px) {
+    ...
+} */
+
+    /* // Extra large devices (large desktops, 1200px and up) */
+    /* @media (min-width: 1200px) {
+    ...
+} */

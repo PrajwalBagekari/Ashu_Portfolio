@@ -1,0 +1,145 @@
+{{!-- ---------intrest----- --}}
+
+<div>
+    <div class="row">
+        <div class="container-fluid col-10 col-md-10 col-xl-10">
+            <h1 class="heading">INTRESTS</h1>
+            <div class="row">
+                <div class="main-card col-10 col-md-4 col-lg-3">
+                    <div class="card">
+                        <span class="intrest_text">
+                            <b><i class="card_fa fa-solid fa-share" style="color: green"></b></i>Web
+                            Development</span>
+                    </div>
+                </div>
+                <div class="main-card col-10 col-md-4 col-lg-3">
+                    <div class="card">
+                        <span class="intrest_text">
+                            <b><i class="card_fa fa-solid fa-share" style=" color:tomato"></b></i>Software</span>
+                    </div>
+                </div>
+                <div class="main-card col-10 col-md-4 col-lg-3">
+                    <div class="card">
+                        <span class="intrest_text">
+                            <b><i class="card_fa fa-solid fa-share" style=" color:blue"></b></i>DataBase</span>
+                    </div>
+                </div>
+                <div class="main-card col-10 col-md-4 col-lg-3">
+                    <div class="card">
+                        <span class="intrest_text">
+                            <b><i class="card_fa fa-solid fa-share" style=" color:orange"></b></i>Management</span>
+                    </div>
+                </div>
+                <div class="main-card col-10 col-md-4 col-lg-3">
+                    <div class="card">
+                        <span class="intrest_text">
+                            <b><i class="card_fa fa-solid fa-share" style=" color:violet"></b></i>Movies
+                            &
+                            Webseries</span>
+                    </div>
+                </div>
+                <div class="main-card col-10 col-md-4 col-lg-3">
+                    <div class="card">
+                        <span class="intrest_text">
+                            <b><i class="card_fa fa-solid fa-share" style=" color:rgb(12, 236, 87)"></b></i>Chess</span>
+                    </div>
+                </div>
+                <div class="main-card col-10 col-md-4 col-lg-3">
+                    <div class="card">
+                        <span class="intrest_text">
+                            <b><i class="card_fa fa-solid fa-share" style=" color:black"></b></i>Music</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5">
+    <div class="row">
+        <div class="skills container-fluid col-10 col-md-10 col-xl-10">
+            <h1 class="heading py-3">SKILLS</h1>
+
+            <div class="row">
+                <div class="left_part col-10 col-md-5 col-xl-5">
+
+                    <div class="progress_div">
+                        <div class="upper_head">
+                            <span>C</span><span>70%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress_bar bar_ani" role="progressbar"
+                                style="width: 70%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                                aria-valuemax="70"></div>
+                        </div>
+                        {{!-- <img class="span_tri" src="images/tri.png" /> --}}
+
+                    </div>
+
+                    <div class="upper_head">
+                        <span>Python</span><span>75%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress_bar bar_ani" role="progressbar"
+                            style="width: 75%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                            aria-valuemax="70"></div>
+                    </div>
+
+                    <div class="upper_head">
+                        <span>JavaScript</span><span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress_bar bar_ani" role="progressbar"
+                            style="width: 80%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                            aria-valuemax="70"></div>
+                    </div>
+
+                    <div class="upper_head">
+                        <span>HTML</span><span>98%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress_bar bar_ani" role="progressbar"
+                            style="width: 98%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                            aria-valuemax="70"></div>
+                    </div>
+
+
+                </div>
+                <div class="left_part col-10 col-md-5 col-xl-5">
+                    <div class="upper_head">
+                        <span>CSS & Bootsrap</span><span>95%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress_bar bar_ani" role="progressbar"
+                            style="width: 95%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                            aria-valuemax="70"></div>
+                    </div>
+                    <div class="upper_head">
+                        <span>NodeJs</span><span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress_bar bar_ani" role="progressbar"
+                            style="width: 90%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                            aria-valuemax="70"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script>
+    var pbar = document.getElementsByClassName("bar_ani");
+    window.addEventListener('scroll', () => {
+
+        for (var i = 0; i < pbar.length; i++) {
+            if (window.scrollY > 930) {
+                pbar[i].classList.add("animate_scroll");
+            }
+            else {
+                pbar[i].classList.remove("animate_scroll");
+            }
+        }
+    });
+</script>
+</section>
