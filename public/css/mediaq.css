@@ -20,11 +20,11 @@
 
     /* ---------------Home Section------------------ */
     .main_home {
-        height: 100vh;
+        height: 150vh;
     }
 
     .details {
-        height: 50vh;
+        height: 60vh;
     }
 
     .details h3 {
@@ -56,8 +56,12 @@
     }
 
     .figure_pfp {
-        height: 25rem;
-        width: 20rem;
+        height: 22rem;
+        width: 17rem;
+    }
+    .figure_pfp::before{
+        height: 22rem;
+        width: 17rem;
     }
 
     /* ---------------About Section------------------ */
@@ -78,7 +82,7 @@
     }
 
     .right_abt {
-        margin-bottom: 3rem 0;
+        margin-bottom: 3rem 0; 
     }
     
     .main_contact {
@@ -97,17 +101,14 @@
     .message {
         height: 7.5rem;
         width: 15rem;
-    /* // Medium devices (tablets, 768px and up) */
-    /* @media (min-width: 768px) {
-    ...
-} */
+    }
 
-    /* // Large devices (desktops, 992px and up) */
-    /* @media (min-width: 992px) {
-    ...
-} */
-
-    /* // Extra large devices (large desktops, 1200px and up) */
-    /* @media (min-width: 1200px) {
-    ...
-} */
+    /* --------footer----- */
+    
+.top_footer {
+    height: 25vh;
+}
+    .below_footer {
+        height: 23vh;
+    }
+}

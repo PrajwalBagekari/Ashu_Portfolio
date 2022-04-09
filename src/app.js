@@ -25,14 +25,16 @@ app.get("/", (req, res) => {
     res.render("index");
 })
 
+
 app.post("/contact", async (req, res) => {
 
     try {
-        const user = new User(req.body);
-        await user.save();
+        const userData = new User(req.body);
+        await userData.save();
+        res.status(201).render("index");
 
     } catch (error) {
-        console.log(error).status(500);
+        res.status(500).send(error);
     }
 
 

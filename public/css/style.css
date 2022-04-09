@@ -1,5 +1,5 @@
 :root {
-    --main-color: #50a8ea;
+    --main-color: rgb(132, 144, 255);
     --main-bgcolor: #2c3246;
     --gradient: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98 189 252) 100%);
 }
@@ -10,7 +10,8 @@
     box-sizing: border-box;
 }
 ::selection{
-    background-color: rgb(206, 227, 245);
+    /* background-color: rgb(243, 251, 255); */
+    text-shadow: 0px 0px 5px grey ;
 }
 
 html {
@@ -20,6 +21,7 @@ html {
 
 body {
     width: 100%;
+    position: relative;
     background-color: hsl(206, 79%, 94%);
     font-family: 'Raleway', sans-serif;
     display: flex;
@@ -56,10 +58,19 @@ button a {
     z-index: 10;
 }
 .navbar-toggler{
+    height: 3rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     color: var(--main-color) !important;
-    background-color: #fff !important;
+    background-color: rgb(99, 98, 98) !important;
+    box-shadow: 0 0 8px #000;
 }
-
+.toggle_icon{
+    font-size: 2rem;
+    color:#fff;
+}
 .nav-item {
     padding: 0 2rem;
 }
@@ -100,15 +111,20 @@ li.active::after, li a:hover::after {
 /* ---------------------Main HOme-------- */
 
 .main_home {
-    height: 95vh;
+    height: 120vh;
     width: 100%;
     display: flex;
-
+    justify-content: center;
+    align-items: center;
+}
+.main_head{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .details {
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -119,9 +135,12 @@ li.active::after, li a:hover::after {
     font-size: 1.3rem;
     font-weight: 700;
     color: #9799a0;
-
 }
-
+.sub-title{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #9799a0;
+}
 .details h2 {
     width: 25rem;
     margin: 0.5rem 0 2rem 0;
@@ -153,20 +172,45 @@ li.active::after, li a:hover::after {
 
 .details p {
     font-size: 1.5rem;
-    margin: 0.7rem;
+    margin: 0.5rem 0 1rem 0rem;
 }
-
-.details button {
+.here-btn a:hover{
+    color: #fff;
+}
+.here-btn {
     font-size: 1.5rem;
     width: 10rem;
     height: 5rem;
     border: none;
     background: var(--gradient);
     color: white;
+    position: relative;
+}
+.overlay_eff{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background:linear-gradient(0deg,black,grey);
+    opacity: 0.3;
+    border-radius: 50%;
+    animation: ripple 0.3s linear;
+    z-index: 1000;
 }
 
+@keyframes ripple {
+    from{
+        height:0;
+        width:0;
+    }
+    to{
+        height: 5rem;
+        width: 5rem;
+    }
+    
+}
+
+
 .picture {
-    height: 100vh;
+    height: 120vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -176,12 +220,11 @@ li.active::after, li a:hover::after {
 
 .image_pfp {
     height: 30rem;
-    width: 25rem;
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 0px 63px -1px rgba(14, 205, 230, 1);
-    -moz-box-shadow: 0px 0px 63px -1px rgba(14, 205, 230, 1);
-    box-shadow: 0px 0px 63px -1px rgba(14, 205, 230, 1);
-    animation: zoom_pfp 3s infinite linear;
+    width: 20rem;
+    -webkit-box-shadow: 0px 0px 20px -1px rgba(14, 205, 230, 1);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(14, 205, 230, 1);
+    box-shadow: 0px 0px 20px -1px rgba(14, 205, 230, 1);
+    /* animation: zoom_pfp 10s infinite linear; */
     /* position: relative; */
 }
 
@@ -191,7 +234,7 @@ li.active::after, li a:hover::after {
     }
 
     50% {
-        transform: scale(1.1);
+        transform: scale(1.01);
     }
 
     100% {
@@ -200,16 +243,28 @@ li.active::after, li a:hover::after {
 }
 
 .figure_pfp {
-    height: 37rem;
-    width: 35rem;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    height: 32rem;
+    width: 22rem;
     /* position: absolute; */
     top: -3rem;
     left: -3rem;
-    background: var(--gradient);
+    background: var(--main-bgcolor);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.figure_pfp::before{
+    content: "";
+    height: 32rem;
+    width: 22rem;
+    /* border-right: 4px solid grey; */
+    background:var(--gradient);
+    z-index: -5;
+    opacity: 0.8;
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
 }
 
 /* ----------------About us------------- */
@@ -267,7 +322,7 @@ li.active::after, li a:hover::after {
 .left_fa {
     font-size: 1.6rem;
     color: #2c3246;
-    /* margin-right: 1rem; */
+    margin-right: 1rem;
 }
 
 .center_abt {
@@ -330,7 +385,7 @@ li.active::after, li a:hover::after {
 }
 
 .right_abt {
-    height: 30vh;
+    height: 35vh;
     width: 100%;
     box-shadow: 0.8rem 0.8rem 1.2rem #9799a0;
     background-color: aliceblue;
@@ -427,21 +482,26 @@ li.active::after, li a:hover::after {
     margin: 2rem 0
 }
 
+.main-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .card {
     margin: 1rem 0;
     width: 23rem;
     height: 10rem;
-    border: none;
+    border-bottom: 0.5rem solid rgb(132, 144, 255) !important;
     /* background-image: linear-gradient(to right, rgb(255, 255, 255, 0.2), rgb(255, 255, 255, 0.2)); */
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding: 2rem 0.2em;
+
     border-radius: 0px;
-    background: #e0e0e0;
-    box-shadow:  11px 11px 63px #cacaca,
-                 -11px -11px 63px #f6f6f6;
+box-shadow:  6px 6px 29px #afbec7,
+             -6px -6px 29px #ffffff;
     position: relative;
     transition: all 1s;
     overflow: hidden;
@@ -469,6 +529,9 @@ li.active::after, li a:hover::after {
 
 
 .intrest_text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     font-size: 2rem;
 }
 
@@ -533,10 +596,6 @@ li.active::after, li a:hover::after {
     margin: 2.5rem 0 0.4rem 0;
 }
 
-.left_part {
-    margin: 0 8rem 0 0;
-}
-
 div .row {
     --bs-gutter-x: 0;
 }
@@ -570,9 +629,9 @@ div .row {
 
 /* --------------RESUME-------- */
 .resume_head {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    padding: 0.5rem 0;
+    /* padding: 0.5rem 0; */
     color: #4d5255;
 }
 
@@ -582,9 +641,18 @@ div .row {
     padding: 0.5rem 0;
     color: #222425;
 }
-
+.list_res{
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    color: var(--main-color);
+}
 .content {
-    margin-left: 4rem;
+    /* height: 25rem; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     position: relative;
 }
 
@@ -594,17 +662,16 @@ div .row {
     width: 1.8rem;
     border: 4px solid var(--main-color);
     background: var(--gradient);
-
     border-radius: 50%;
     position: absolute;
     left: -10%;
-    top: 8%;
+    top: 4%;
     z-index: 3;
 }
 
 .content::after {
     content: "";
-    height: 20rem;
+    height:90%;
     width: 3px;
     position: absolute;
     top: 10%;
@@ -628,6 +695,32 @@ div .row {
     -webkit-box-shadow: 0px 0px 34px -12px rgba(94, 109, 122, 0.75) inset;
     -moz-box-shadow: 0px 0px 34px -12px rgba(94, 109, 122, 0.75) inset;
 }
+.resume_btn{
+    height: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.download-btn{
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 5rem;
+    border: none;
+    background: var(--main-bgcolor);
+    color: white;
+    margin: 1rem 2rem 1rem 0;
+}
+.check-btn{
+    font-size: 1.5rem;
+    width: 10rem;
+    height: 5rem;
+    border: none;
+    background: var(--main-color);
+    color: white;
+}
+.resume_btn button a:hover{
+    color: #fff;
+}
 
 
 /* ---------------Certification------------ */
@@ -646,6 +739,7 @@ div .row {
     border-radius: 1rem;
     position: relative;
     z-index: 1;
+    border-bottom: 0.5rem solid rgb(132, 144, 255);
     cursor: pointer;
     overflow: hidden;
 }
@@ -667,7 +761,9 @@ div .row {
     height: 145%;
     width: 145%;
 }
-
+.head_cer{
+    color: rgb(132, 144, 255);
+}
 
 /* .card_cer:hover {
 
@@ -868,8 +964,73 @@ div .row {
     background-color: rgb(14, 138, 240);
     color: white;
 }
+.github{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
 
+.up_scroll{
+    position: fixed;
+    bottom: 5%;
+    right:5%;
+    height: 4rem;
+    width: 5rem;
+    background:var(--gradient);
+    box-shadow: 4px 4px 8px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    animation: zoom_pfp 1.5s infinite linear;
+    z-index: 100;
 
+}
+.up_arrow{
+    font-size: 2.5rem;
+    color: #fff;
+    animation: zoom_pfp 1.5s infinite linear;
+
+}
+.hide{
+    display: none;
+}
+/*==============freeleancing section==============*/
+.section_view{
+    width: 100%;
+    /* height: 20rem; */
+    background-image: url("../images/free_img.jpg");
+    background-size:100% 100% ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: all 0.7s linear;
+    position: relative;
+}
+.overlay_free{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0.5;
+}
+.section_view .container_free{
+    position: relative;
+    padding: 2rem 1rem;
+}
+
+.section_view .title_free{
+    color:#fff;
+    padding:1.5rem 0 0.5rem 0;
+}
+.section_view .para_free{
+    color:#fff;
+    font-size: 1.4rem;
+    padding:0.7rem 0;
+}
+.title_free span{
+    color:greenyellow;
+}
 /* --------------------Contactus-----------------z */
 
 .main_contact {
@@ -897,7 +1058,10 @@ box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
 .right_con {
     height: 70vh;
     width: 100%;
-    background: var(--gradient);
+    background-image: linear-gradient(0deg, rgba(132, 144, 255,0.7), rgba(98,189 ,252,0.7)),url("https://images.unsplash.com/photo-1544006659-f0b21884ce1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwbGFwdG9wfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+    background-size: 100% 100%;
+    /* background: var(--gradient); */
+    /* opacity: 0.5; */
     -webkit-box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
 -moz-box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
 box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
@@ -995,13 +1159,14 @@ input:-webkit-autofill {
 
 .footer {
     width: 100vw;
+    height: 50%;
     margin-top: auto;
 
 }
 
 .main_footer {
     background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.9));
-    height: 45vh;
+    height: 30vh;
     width: 100%;
     margin-top: 10rem;
     display: flex;
@@ -1017,7 +1182,7 @@ input:-webkit-autofill {
 }
 
 .top_footer {
-    height: 38vh;
+    height: 30vh;
     width: 100%;
 
 }
