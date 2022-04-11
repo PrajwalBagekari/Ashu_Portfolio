@@ -64,12 +64,12 @@
 
                     <div class="progress_div">
                         <div class="upper_head">
-                            <span>C</span><span>70%</span>
+                            <span>Data Structure</span><span>75%</span>
                         </div>
                         <div class="progress">
                             <div class="progress_bar bar_ani" role="progressbar"
-                                style="width: 70%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
-                                aria-valuemax="70"></div>
+                                style="width: 75%; background:var(--gradient)" aria-valuenow="75" aria-valuemin="0"
+                                aria-valuemax="75"></div>
                         </div>
                         {{!-- <img class="span_tri" src="images/tri.png" /> --}}
 
@@ -78,29 +78,29 @@
                     <div class="progress_div">
 
                         <div class="upper_head">
-                            <span>Python</span><span>75%</span>
+                            <span>Python</span><span>78%</span>
                         </div>
                         <div class="progress">
                             <div class="progress_bar bar_ani" role="progressbar"
-                                style="width: 75%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                                style="width: 78%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
                                 aria-valuemax="70"></div>
                         </div>
                     </div>
                     <div class="progress_div">
 
                         <div class="upper_head">
-                            <span>JavaScript</span><span>80%</span>
+                            <span>JavaScript</span><span>88%</span>
                         </div>
                         <div class="progress">
                             <div class="progress_bar bar_ani" role="progressbar"
-                                style="width: 80%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                                style="width: 88%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
                                 aria-valuemax="70"></div>
                         </div>
                     </div>
 
                     <div class="progress_div">
                         <div class="upper_head">
-                            <span>HTML</span><span>98%</span>
+                            <span>Front-End</span><span>98%</span>
                         </div>
                         <div class="progress">
                             <div class="progress_bar bar_ani" role="progressbar"
@@ -111,29 +111,33 @@
                 </div>
 
                 <div class="right_part mx-auto col-10 col-md-5 col-xl-5">
-                    <div class="progress_div">
 
-                        <div class="upper_head">
-                            <span>CSS & Bootsrap</span><span>95%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress_bar bar_ani" role="progressbar"
-                                style="width: 95%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
-                                aria-valuemax="70"></div>
-                        </div>
-                    </div>
                     <div class="progress_div">
                         <div class="progress_div">
                             <div class="upper_head">
-                                <span>NodeJs</span><span>90%</span>
+                                <span>MongoDB</span><span>70%</span>
                             </div>
                             <div class="progress">
                                 <div class="progress_bar bar_ani" role="progressbar"
-                                    style="width: 90%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                                    style="width: 70%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
                                     aria-valuemax="70"></div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="progress_div">
+                        <div class="progress_div">
+                            <div class="upper_head">
+                                <span>Back-End</span><span>80%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress_bar bar_ani" role="progressbar"
+                                    style="width: 80%; background:var(--gradient)" aria-valuenow="70" aria-valuemin="0"
+                                    aria-valuemax="70"></div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -177,6 +181,23 @@
         });
     });
 
+
+    const ripple_btns = document.querySelectorAll(".ripple_btn");
+
+    ripple_btns.forEach((ripple_btn) => {
+        ripple_btn.addEventListener("click", (e) => {
+            let x = e.pageX - e.target.offsetLeft;
+            let y = e.pageY - e.target.offsetTop;
+
+            let overlay_btn = document.createElement("span");
+            overlay_btn.classList.add("overlay_btn_eff");
+            overlay_btn.style.top = y + "px";
+            overlay_btn.style.left = x + "px";
+
+            ripple_btn.appendChild(overlay_btn);
+
+        });
+    });
 
 </script>
 

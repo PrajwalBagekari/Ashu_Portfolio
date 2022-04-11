@@ -8,10 +8,11 @@
                     <div class="content">
                         <h2 class="resume_head">Summary</h2>
                         <p class="para">Innovative and deadline-driven Web developer with experience in
-                            HTML,CSS,JAVASCRIPT,Reactjs in backend development.An enthusiastic fresher with highly
+                            HTML, CSS,JAVASCRIPT, NodeJS in backend development. An enthusiastic fresher with highly
                             motivated and leadership skills having bachelors of engineering degree in E&TC
-                            Engineering.Expert in implementation of each step of project.Eager to learn new technologies
-                            and methodologies.Always willing to innovate the new things which can improve the existing
+                            Engineering. Expert in implementation of each step of project.Eager to learn new
+                            technologies
+                            and methodologies. Always willing to innovate the new things which can improve the existing
                             technology.</p>
                     </div>
                     <div class="content">
@@ -36,13 +37,13 @@
                         <p class="para">
                         <ul>
                             <li class="list_res">Leadership</li>
-                            <p class="para">Class Repreentative<br>
+                            <p class="para">Class Representative<br>
                                 Co-ordinator for Arduino course<br>
                                 Technical team co-ordinator</p>
                             <li class="list_res">In Projects</li>
                             <p class="para">Leaded my PBL group<br>
                                 Contributed as a Web Developer<br>
-                                Worked as a Tresurer</p>
+                                Worked as a Treasurer</p>
 
                         </ul>
                         </p>
@@ -50,13 +51,42 @@
                     <li class="list_res">Check My Resume</li>
 
                     <div class="resume_btn">
-                        <button class="ripple download-btn"><a href="files/Ashutosh Mishra (resume).pdf"
+                        <button class="ripple_btn download-btn"><a href="files/Ashutosh Mishra (resume).pdf"
                                 title="more about me" download>Downlooad</a></button>
-                        <button class="ripple check-btn"><a href="files/Ashutosh Mishra (resume).pdf"
+                        <button class="ripple_btn check-btn"><a href="files/Ashutosh Mishra (resume).pdf"
                                 title="more about me" target="_ashu">Check</a></button>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+
+    const ripple_btns = document.querySelectorAll(".ripple_btn");
+
+    ripple_btns.forEach((ripple_btn) => {
+        ripple_btn.addEventListener("click", (e) => {
+
+            let x = e.pageX - e.target.offsetLeft;
+            let y = e.pageY - e.target.offsetTop;
+
+            let overlay_btn = document.createElement("span");
+            overlay_btn.classList.add("overlay_btn_eff");
+            overlay_btn.style.left = x + "px";
+            overlay_btn.style.top = y + "px";
+
+            ripple_btn.appendChild(overlay_btn);
+
+            console.log("ripple_btn");
+
+            setTimeout(() => {
+                overlay_btn.remove();
+            }, 800)
+        })
+    })
+
+
+</script>

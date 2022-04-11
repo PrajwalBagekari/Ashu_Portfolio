@@ -51,8 +51,8 @@
                                 <label class="msg">Message</label><br>
                                 <textarea class="message" name="message"></textarea>
                             </div>
-                            <button type="submit" class="send_box"><i
-                                    class=" fa-solid fa-envelope-circle-check"></i></button>
+                            <button type="submit" class="send_box"><i class=" fa-solid fa-envelope-circle-check"
+                                    onclick="success()"></i></button>
                         </div>
                     </form>
 
@@ -98,3 +98,23 @@
     </div>
 
 </section>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function hire() {
+        swal({
+            title: "It will be nice working with you!",
+            text: "See yaa!",
+            button: "OK!",
+        });
+    }
+    function success() {
+        swal({
+            title: "Thanks for your Response!",
+            text: "Got your message!",
+            icon: "success",
+            button: "OK!",
+        });
+    }
+
+</script>
