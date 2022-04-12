@@ -1,6 +1,6 @@
 <div class="py-5 mx-auto" id="resume">
     <div class="row">
-        <div class="skills container-fluid col-9 col-md-9 col-xl-10">
+        <div class="skills container-fluid col-9 col-md-10 col-xl-10">
             <h1 class="heading py-3">RESUME</h1>
             <h1 class="check">CHECK MY RESUME</h1>
             <div class="row">
@@ -55,38 +55,9 @@
                                 title="more about me" download>Downlooad</a></button>
                         <button class="ripple_btn check-btn"><a href="files/Ashutosh Mishra (resume).pdf"
                                 title="more about me" target="_ashu">Check</a></button>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<script>
-
-    const ripple_btns = document.querySelectorAll(".ripple_btn");
-
-    ripple_btns.forEach((ripple_btn) => {
-        ripple_btn.addEventListener("click", (e) => {
-
-            let x = e.pageX - e.target.offsetLeft;
-            let y = e.pageY - e.target.offsetTop;
-
-            let overlay_btn = document.createElement("span");
-            overlay_btn.classList.add("overlay_btn_eff");
-            overlay_btn.style.left = x + "px";
-            overlay_btn.style.top = y + "px";
-
-            ripple_btn.appendChild(overlay_btn);
-
-            console.log("ripple_btn");
-
-            setTimeout(() => {
-                overlay_btn.remove();
-            }, 800)
-        })
-    })
-
-
-</script>

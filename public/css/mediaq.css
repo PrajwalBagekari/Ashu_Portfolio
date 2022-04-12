@@ -1,8 +1,270 @@
 /* // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap */
 
+
+@media (min-width:768px) and (max-width: 1025px )
+{
+     /* --------------nav Section------------------ */
+
+     .logo {
+        margin-top: 0.5rem;
+        height: 5.5rem;
+        width: 20rem;
+        border-radius: 1rem;
+    }
+     .nav-link {
+        font-size: 3rem;
+     }
+     li.active::after, li a:hover::after {
+        height: 0.5rem;
+        width: 10%;
+        background: var(--gradient);
+        animation: appear 0.5s linear;
+        left: 1.5rem;
+        top: 99%;
+    }
+    @keyframes appear {
+        from {
+            width: 0;
+        }
+    
+        to {
+            width: 10%;
+        }
+    }
+
+     /* ---------------Home Section------------------ */
+     .main_home {
+        height: auto;
+    }
+    .left_abt {
+        height: 50vh;
+        width: 80%;
+    }
+
+    .details {
+        height: 60vh;
+    }
+    
+    .details h3 {
+        font-size: 2rem;
+    }
+
+    .details h2 {
+        width: 50rem;
+        font-size: 4rem;
+    }
+
+    .details p {
+        font-size: 2rem;
+    }
+
+    .details button {
+        margin:1rem 0;
+        font-size: 2rem;
+        width: 13rem;
+        height: 5rem;
+    }
+
+    .picture {
+        height: 40vh;
+    }
+
+    .image_pfp {
+        height: 35rem;
+        width: 30rem;
+    }
+
+    .figure_pfp {
+        height: 36rem;
+        width: 31rem;
+    }
+    .figure_pfp::before{
+        height: 38rem;
+        width: 33rem;
+    }
+
+    /* ===============================About========================== */
+
+    .left_abt_img {
+        height: 15vh;
+        width: 90%;
+    }
+    .qualities {
+        font-size: 3rem;
+    }
+
+    .center_abt {
+        height: auto;
+        margin: 3rem 0;
+    }
+    
+    .center_abt h2 {
+        width: 100%;
+    margin: 2rem 0 6rem 0;
+    font-size: 4rem;
+    }
+    .center_abt h2::after {
+      
+        bottom: -5rem;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: var(--gradient);
+    }
+    .center_abt h2::before {
+        bottom: -4.5rem;
+        width: 15rem;
+        height: 0.4rem;
+        background: var(--gradient);
+    
+    }
+    .center_abt .know_me {
+        font-size:3rem;
+    }
+    .social_heading{
+        font-size: 3rem;
+    }
+    .about_social {
+        width: 100%;
+                            }
+    .about_social .fa-brands {
+        font-size: 4rem;
+    }
+    .right_abt {
+        height: 28vh;
+    }
+    .right_abt .sub_heading{
+        font-size: 4rem;
+    }
+    .right_abt .sub_heading::before {
+        content: "";
+        border-left: 0.5rem solid var(--main-color);
+        margin: 1rem;
+        height: 4.5rem;
+        width: 0.5rem;
+        border-radius: 15px;
+        position: absolute;
+        left: -1rem;
+        top: 0.5rem;
+    }
+    .right_abt .qualities{
+        font-size: 3rem;
+    }
+
+/* =============Intrest section================= */
+    .card {
+        margin: 1rem 0;
+        width: 20rem;
+    }
+    .intrest_text {
+     font-size: 1.7rem;
+    }
+
+
+/* =============res section================= */
+.para {
+    font-size: 1.8rem;
+}
+/* =============contact section================= */
+
+    .main_contact {
+        height: 150vh;
+    }
+    .contact_head {
+        height: 130vh;
+    }
+    .left_con {
+        height: 65vh;
+    }
+    .right_con {
+        height: 60vh;
+    }
+    label {
+        color: grey;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .text {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        width: 90%;
+        height: 3.5rem;
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: white;
+        outline: none;
+    }
+
+    .message {
+        font-size: 3rem;
+        height: 7.5rem;
+        width: 35rem;
+        height:9rem;
+        margin-right:3rem;
+    }
+    .head_bull {
+        font-size: 4rem;
+        margin: 3rem 0 4rem 0;
+    }
+
+    .bullet_icons {
+        padding: 3.5rem;
+        font-size: 3rem;
+    }
+    .bullet_text {
+        font-size: 3rem;
+    }
+    .social a i{
+        font-size: 4rem;
+    }
+    .top_footer {
+        height: auto;
+    }
+    .below_footer {
+        height: auto;
+    }
+    .footer_navlinks ul a {
+        
+        font-size: 2.5rem;
+    }
+    .footer_intrests ul li {
+        
+        font-size: 1.8rem;
+    }
+    /* ===================frree icons============= */
+    .section_view .title_free{
+        font-size: 4rem;
+    }
+
+    .section_view .para_free{
+        color:#fff;
+        font-size: 2rem;
+    }
+
+    /* ===================social icons============= */
+    .fa-brands {
+        font-size: 3rem;
+    }
+    @keyframes zoom-in-out {
+        from {
+            transform: scale(1);
+        }
+    
+        to {
+            transform: scale(1.2);
+        }
+    }
+    
+}
+
+
+
+
+
 /* // Small devices (landscape phones, 576px and up) */
-@media (max-width: 481px ) {
+@media (max-width: 768px ) {
 
     li.active::after, li a:hover::after {
         width: 10%;
@@ -17,6 +279,47 @@
             width: 10%;
         }
     }
+
+    /* ---------------About Section------------------ */
+    .main_aboutus {
+        height: 250vh;
+    }
+
+    .qualities {
+        font-size: 2rem;
+    }
+
+    .center_abt {
+        height: 80vh;
+    }
+
+    .center_abt div .know_me {
+        font-size: 2.5rem;
+    }
+
+    .right_abt {
+        margin-bottom: 3rem 0; 
+    }
+    
+    .main_contact {
+        height: 170vh;
+    }
+    .contact_head {
+        height: 130vh;
+    }
+    .left_con {
+        height: 70vh;
+    }
+    .right_con {
+        height: 55vh;
+    }
+
+    .message {
+        height: 7.5rem;
+        width: 15rem;
+    }
+
+
 
     /* ---------------Home Section------------------ */
     .main_home {
@@ -84,7 +387,7 @@
     .right_abt {
         margin-bottom: 3rem 0; 
     }
-    
+    /* ======================contact======================= */
     .main_contact {
         height: 170vh;
     }
@@ -103,8 +406,40 @@
         width: 15rem;
     }
 
-    /* --------footer----- */
+    /* --------contact----- */
     
+    .contact_head {
+        height: 130vh;
+    }
+    .left_con {
+        height: 70vh;
+    }
+    .right_con {
+        height: 60vh;
+    }
+    .head_con{
+        font-size: 2rem;
+    }
+    label {
+        color: grey;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .text {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        width: 70%;
+        height: 2rem;
+    }
+    .message {
+        font-size: 2rem;
+        height: 7.5rem;
+        width: 15rem;
+        height:9rem;
+        margin-right:3rem;
+    }
+
+    /* --------footer----- */
 .top_footer {
     height: 25vh;
 }

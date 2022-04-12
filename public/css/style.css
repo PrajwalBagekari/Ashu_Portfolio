@@ -2,6 +2,9 @@
     --main-color: rgb(132, 144, 255);
     --main-bgcolor: #2c3246;
     --gradient: linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98 189 252) 100%);
+    --progress-gradient: linear-gradient(to right, rgb(132, 144, 255) , rgb(98 189 252),
+    rgb(84, 241, 250));
+
 }
 
 * {
@@ -56,6 +59,7 @@ button a {
     left: 0%;
     width: 100%;
     height: auto;
+
     z-index: 10;
 }
 .navbar-toggler{
@@ -63,7 +67,7 @@ button a {
     width: 4rem;
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     color: var(--main-color) !important;
     background-color: rgb(99, 98, 98) !important;
     box-shadow: 0 0 8px #000;
@@ -334,8 +338,8 @@ li.active::after, li a:hover::after {
     /* background-color: greenyellow; */
 }
 
-.center_abt h2 {
-    width: 25rem;
+    .center_abt h2 {
+        width: 25rem;
     margin: 0.5rem 0 2rem 0;
     font-size: 2.5rem;
     font-weight: bolder;
@@ -351,7 +355,6 @@ li.active::after, li a:hover::after {
     height: 1rem;
     border-radius: 50%;
     background: var(--gradient);
-
 }
 
 .center_abt h2::before {
@@ -714,9 +717,10 @@ div .row {
     border: none;
     background: var(--main-bgcolor);
     color: white;
+    position: relative;
     animation: zoom_pfp 1.5s infinite linear;
 
-}
+}            
 .check-btn{
     font-size: 1.5rem;
     width: 10rem;
@@ -724,6 +728,7 @@ div .row {
     border: none;
     background: var(--gradient);
     color: white;
+    position: relative;
     animation: zoom_pfp 1.5s infinite linear;
 
 }
@@ -758,6 +763,18 @@ div .row {
 
 
 /* ---------------Certification------------ */
+.certifiate_head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.certicate_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .card_cer {
     margin: 4rem;
     height: 30rem;
@@ -1089,6 +1106,7 @@ div .row {
 box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
 }
 
+
 .right_con {
     height: 70vh;
     width: 100%;
@@ -1100,17 +1118,36 @@ box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
 -moz-box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
 box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
 }
-
+.head_con{
+    color: var(--main-color);
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+.left_contact_side div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.right_contact_side div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 label {
     color: grey;
-    font-size: 1.2rem;
+    width: 80%;
+    font-size: 1.7rem;
     font-weight: 400;
 }
 
 .text {
-    font-size: 1.7rem;
-    margin-bottom: 1rem;
-    width: 20rem;
+    font-size: 2.5rem;
+    margin: 1rem;
+    width: 80%;
     border: none;
     border-bottom: 2px solid black;
     background-color: white;
@@ -1135,6 +1172,7 @@ input:-webkit-autofill {
     border-bottom: 1px solid black;
     background-color: white;
     outline: none;
+    margin-right: 2rem;
 }
 .message:focus{
     border-bottom: 3px solid var(--main-color);
@@ -1161,7 +1199,6 @@ input:-webkit-autofill {
 .head_bull {
     margin: 2rem 0 2rem 0;
     color: #fff;
-
 }
 
 .bullets {

@@ -54,6 +54,32 @@
             console.log(document.body.clientHeight);
             console.log(scrollY);
         })
+
+
+        const ripple_btns = document.querySelectorAll(".ripple_btn");
+
+        ripple_btns.forEach((ripple_btn) => {
+            ripple_btn.addEventListener("click", (e) => {
+
+                let x = e.pageX - e.target.offsetLeft;
+                let y = e.pageY - e.target.offsetTop;
+
+                let overlay_btn = document.createElement("span");
+                overlay_btn.classList.add("overlay_btn_eff");
+                overlay_btn.style.left = x + "px";
+                overlay_btn.style.top = y + "px";
+
+                ripple_btn.appendChild(overlay_btn);
+
+                console.log("ripple_btn");
+
+                setTimeout(() => {
+                    overlay_btn.remove();
+                }, 800)
+            })
+        })
+
+
     </script>
 </body>
 
