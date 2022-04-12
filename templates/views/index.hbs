@@ -42,6 +42,8 @@
     </div>
 
     <script>
+        console.log("scrollY");
+
         const totop = document.getElementById("up_scroll");
 
         window.onscroll = addEventListener("scroll", () => {
@@ -55,8 +57,9 @@
             console.log(scrollY);
         })
 
-
-        const ripple_btns = document.querySelectorAll(".ripple_btn");
+    </script>
+    <script>
+          const ripple_btns = document.querySelectorAll(".ripple_btn");
 
         ripple_btns.forEach((ripple_btn) => {
             ripple_btn.addEventListener("click", (e) => {
@@ -78,9 +81,8 @@
                 }, 800)
             })
         })
-
-
     </script>
+
 </body>
 
 

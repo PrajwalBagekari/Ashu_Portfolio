@@ -133,7 +133,7 @@
         font-size: 4rem;
     }
     .right_abt {
-        height: 28vh;
+        height: 35vh;
     }
     .right_abt .sub_heading{
         font-size: 4rem;
@@ -264,7 +264,7 @@
 
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (max-width: 768px ) {
+@media (max-width: 770px ) {
 
     li.active::after, li a:hover::after {
         width: 10%;
@@ -323,11 +323,11 @@
 
     /* ---------------Home Section------------------ */
     .main_home {
-        height: 150vh;
+        height: 120vh;
     }
 
     .details {
-        height: 60vh;
+        height: 55vh;
     }
 
     .details h3 {
@@ -354,22 +354,22 @@
     }
 
     .image_pfp {
-        height: 20rem;
-        width: 15rem;
+        height: 25rem;
+        width: 20rem;
     }
 
     .figure_pfp {
-        height: 22rem;
-        width: 17rem;
+        height: 27rem;
+        width: 22rem;
     }
     .figure_pfp::before{
-        height: 22rem;
-        width: 17rem;
+        height: 27rem;
+        width: 22rem;
     }
 
     /* ---------------About Section------------------ */
     .main_aboutus {
-        height: 250vh;
+        height: auto;
     }
 
     .qualities {
@@ -377,7 +377,7 @@
     }
 
     .center_abt {
-        height: 80vh;
+        height: auto;
     }
 
     .center_abt div .know_me {
@@ -385,6 +385,8 @@
     }
 
     .right_abt {
+        height: auto;
+
         margin-bottom: 3rem 0; 
     }
     /* ======================contact======================= */

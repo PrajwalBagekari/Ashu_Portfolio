@@ -116,13 +116,14 @@ li.active::after, li a:hover::after {
 /* ---------------------Main HOme-------- */
 
 .main_home {
-    height: 120vh;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .main_head{
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1117,6 +1118,7 @@ box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
     -webkit-box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
 -moz-box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
 box-shadow: 0px 0px 38px -10px rgba(138,134,138,1);
+position: relative;
 }
 .head_con{
     color: var(--main-color);
@@ -1219,7 +1221,10 @@ input:-webkit-autofill {
 }
 
 .social {
-    margin-top: 3rem;
+    position: absolute;
+    bottom: 5rem;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
