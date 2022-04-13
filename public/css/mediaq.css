@@ -42,9 +42,7 @@
         width: 80%;
     }
 
-    .details {
-        height: 60vh;
-    }
+
     
     .details h3 {
         font-size: 2rem;
@@ -66,22 +64,19 @@
         height: 5rem;
     }
 
-    .picture {
-        height: 40vh;
-    }
 
     .image_pfp {
         height: 35rem;
-        width: 30rem;
+        width: 35rem;
     }
 
     .figure_pfp {
         height: 36rem;
-        width: 31rem;
+        width: 37rem;
     }
     .figure_pfp::before{
         height: 38rem;
-        width: 33rem;
+        width: 39rem;
     }
 
     /* ===============================About========================== */
@@ -175,12 +170,13 @@
     .contact_head {
         height: 130vh;
     }
+    .sub-title{
+        font-size: 2rem !important;
+    }
     .left_con {
         height: 65vh;
     }
-    .right_con {
-        height: 60vh;
-    }
+   
     label {
         color: grey;
         font-size: 2rem;
@@ -200,7 +196,7 @@
     .message {
         font-size: 3rem;
         height: 7.5rem;
-        width: 35rem;
+        width: 100%;
         height:9rem;
         margin-right:3rem;
     }
@@ -264,7 +260,7 @@
 
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (max-width: 770px ) {
+@media (max-width: 767px ) {
 
     li.active::after, li a:hover::after {
         width: 10%;
@@ -355,7 +351,7 @@
 
     .image_pfp {
         height: 25rem;
-        width: 20rem;
+        width: 30rem;
     }
 
     .figure_pfp {
@@ -385,8 +381,6 @@
     }
 
     .right_abt {
-        height: auto;
-
         margin-bottom: 3rem 0; 
     }
     /* ======================contact======================= */
@@ -396,12 +390,7 @@
     .contact_head {
         height: 130vh;
     }
-    .left_con {
-        height: 70vh;
-    }
-    .right_con {
-        height: 55vh;
-    }
+    
 
     .message {
         height: 7.5rem;
@@ -416,9 +405,7 @@
     .left_con {
         height: 70vh;
     }
-    .right_con {
-        height: 60vh;
-    }
+   
     .head_con{
         font-size: 2rem;
     }
@@ -430,7 +417,7 @@
     .text {
         font-size: 1.7rem;
         margin-bottom: 1rem;
-        width: 70%;
+        width: 100%;
         height: 2rem;
     }
     .message {

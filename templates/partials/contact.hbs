@@ -14,83 +14,92 @@
         <div class="row">
             <div
                 class="left_con col-12 col-md-12 col-xl-8 mx-auto  d-flex justify-content-center align-items-center flex-column">
-                <h3 class="head_con text-center">Send your message</h3>
+<div class="left_con_child">
+                    <h3 class="head_con text-center">Send your message</h3>
 
-                <div class="w-100">
-                    <form action="/contact" method="POST" class="form_control">
+                    <div class="w-100">
+                        <form action="/contact" method="POST" class="form_control">
 
-                        <div class="row">
-                            <div
-                                class="col-12 col-md-12 col-xl-6 left_contact_side container-fluid d-flex justify-content-center align-items-center flex-column">
-                                <div>
-                                    <label>Your Name</labe><br><input type="text" class="text" name="name">
+                            <div class="row">
+                                <div
+                                    class="col-12 col-md-12 col-xl-6 left_contact_side container-fluid d-flex justify-content-center align-items-center flex-column">
+                                    <div>
+                                        <label>Your Name</labe><br><input type="text" class="text" name="name">
+                                    </div>
+                                    <div>
+                                        <label>Phone</labe><br><input type="tel" class="text" maxlength="10"
+                                                name="phone">
+                                    </div>
                                 </div>
-                                <div>
-                                    <label>Phone</labe><br><input type="tel" class="text" maxlength="10" name="phone">
+
+
+                                <div
+                                    class="col-12 col-md-12 col-xl-6 right_contact_side container-fluid d-flex justify-content-center align-items-center flex-column">
+                                    <div>
+                                        <label>Email Address</labe><br><input type="email" class="text" name="email">
+                                    </div>
+
+                                    <div>
+                                        <label>Profession</labe><br><input type="text" class="text" name="profession">
+                                    </div>
                                 </div>
+
                             </div>
 
-
-                            <div
-                                class="col-12 col-md-12 col-xl-6 right_contact_side container-fluid d-flex justify-content-center align-items-center flex-column">
+                            <div class="bottom_con">
                                 <div>
-                                    <label>Email Address</labe><br><input type="email" class="text" name="email">
+                                    <label class="msg">Message</label><br>
+                                    <textarea class="message" name="message"></textarea>
                                 </div>
-
-                                <div>
-                                    <label>Profession</labe><br><input type="text" class="text" name="profession">
-                                </div>
+                                <button type="submit" class="send_box"><i class=" fa-solid fa-envelope-circle-check"
+                                        onclick="success()"></i></button>
                             </div>
+                        </form>
 
-                        </div>
-
-                        <div class="bottom_con">
-                            <div>
-                                <label class="msg">Message</label><br>
-                                <textarea class="message" name="message"></textarea>
-                            </div>
-                            <button type="submit" class="send_box"><i class=" fa-solid fa-envelope-circle-check"
-                                    onclick="success()"></i></button>
-                        </div>
-                    </form>
-
+                    </div>
                 </div>
+
             </div>
 
             <div class="right_con col-12 col-md-12 col-xl-4">
-                <h3 class="head_bull text-center">Contact Information</h3>
+                <div class="right_con_child">
+                    <h3 class="head_bull text-center">Contact Information</h3>
 
-                <div class=" bullets">
-                    <i class="bullet_icons fa-solid fa-location-dot"></i><span class="bullet_text">Dighi, Pune -
-                        411 015,
-                        Maharashtra.</span>
+                    <div class="bullet_div">
+                        <div class=" bullets">
+                            <i class="bullet_icons fa-solid fa-location-dot"></i><span class="bullet_text">Dighi, Pune -
+                                411 015,
+                                Maharashtra.</span>
+                        </div>
+                        <div class="bullets">
+
+                            <i class="bullet_icons fa-solid fa-mobile-screen"></i>
+
+                            <span class="bullet_text">+91
+                                738-5568-680</span>
+                        </div>
+                        <div class="bullets">
+                            <i class="bullet_icons fa-solid fa-envelope-open-text"></i><span
+                                class="bullet_text">mishraashutosh2309@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="social py-5">
+                        <a href="https://www.instagram.com/ashutosh_23m/" target="_ashu" class="instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+
+                        <a href="https://web.telegram.org/z/#1058145966" target="_ashu" class="telegram"><i
+                                class="fa-brands fa-telegram"></i></a>
+
+                        <a href="https://github.com/Ashu2309" target="_ashu" class="github"><i
+                                class="fa-brands fa-github"></i></a>
+
+                        <a href="https://www.linkedin.com/in/ashutosh-mishra-909550218/" target="_ashu"
+                            class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+
+
+                    </div>
                 </div>
-                <div class="bullets">
 
-                    <i class="bullet_icons fa-solid fa-mobile-screen"></i>
-
-                    <span class="bullet_text">+91
-                        738-5568-680</span>
-                </div>
-                <div class="bullets">
-                    <i class="bullet_icons fa-solid fa-envelope-open-text"></i><span
-                        class="bullet_text">mishraashutosh2309@gmail.com</span>
-                </div>
-                <div class="social py-5">
-                    <a href="https://www.instagram.com/ashutosh_23m/" target="_ashu" class="instagram"><i
-                            class="fa-brands fa-instagram"></i></a>
-
-                    <a href="https://web.telegram.org/z/#1058145966" target="_ashu" class="telegram"><i
-                            class="fa-brands fa-telegram"></i></a>
-
-                    <a href="https://github.com/Ashu2309" target="_ashu" class="github"><i
-                            class="fa-brands fa-github"></i></a>
-
-                    <a href="https://www.linkedin.com/in/ashutosh-mishra-909550218/" target="_ashu" class="linkedin"><i
-                            class="fa-brands fa-linkedin"></i></a>
-
-
-                </div>
             </div>
         </div>
     </div>
